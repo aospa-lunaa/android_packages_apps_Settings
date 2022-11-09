@@ -198,6 +198,12 @@
             android:key="lift_to_wake"
             android:title="@string/lift_to_wake_title"/>
 
+        <co.aospa.framework.preference.SecureSettingSwitchPreference
+            android:key="qs_show_data_usage"
+            android:title="@string/qs_show_data_usage_title"
+            android:summary="@string/qs_show_data_usage_summary"
+            android:defaultValue="false" />
+
         <ListPreference
             android:key="theme"
             android:title="@string/device_theme"
