@@ -133,6 +133,9 @@ public class NotificationAssistantPreferenceController extends TogglePreferenceC
     }
 
     private boolean isNASSettingActivityAvailable() {
+        if (mNASSettingIntent == null) {
+            return false;
+        }
         final List<ResolveInfo> resolved = mPackageManager.queryIntentActivities(mNASSettingIntent,
                 PackageManager.ResolveInfoFlags.of(PackageManager.MATCH_ALL));
         return (resolved != null && !resolved.isEmpty());
